@@ -1,0 +1,6 @@
+#!/bin/bash
+# This script displays specific information from /etc/passwd using a while loop.
+
+while IFS=: read -r username _ uid _ home shell; do
+    echo "$username:$uid:$home"
+done < /etc/passwd
