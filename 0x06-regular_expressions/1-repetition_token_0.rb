@@ -10,7 +10,7 @@ end
 input_string = ARGV[0]
 
 # Check if the input string matches the repetition token pattern
-if input_string.match?(/hbt{2,5}n/)
+if input_string.match?(/hb{0,1}tn/)
   puts input_string
 else
   puts "No match"
