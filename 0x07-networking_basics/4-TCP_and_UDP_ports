@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Display listening ports
+
+# Display header
+echo "Active Internet connections (only servers)"
+echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+
+# Display listening TCP ports for IPv4
+netstat -tln | grep 'tcp.*0\.0\.0\.0' | awk '$6 == "LISTEN" {print $1, $4, $NF}' | sed -nE 's/.*:(.*)/\1/p'
+
+# Display listening UDP ports for IPv4
+netstat -uln | grep 'udp.*0\.0\.0\.0' | awk '$6 == "UNCONN" {print $1, $4, $NF}' | sed -nE 's/.*:(.*)/\1/p'
