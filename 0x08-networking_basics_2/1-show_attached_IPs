@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Use ip command to get the list of IPs
+ip_addresses=$(ip -o -4 addr show scope global | awk '{print $4}' | cut -d'/' -f1)
+
+# Display each IP
+echo "$ip_addresses"
