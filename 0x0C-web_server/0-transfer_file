@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# bash script to transfer files from a client to a server.
-# using the scp linux command, we are taking the arguments that follow
+# A bash script to transfer files from a client to a server.
+# Using the scp linux command, we are taking the arguments that follow
 # PATH_TO_FILE to be copied to server, USER on server IP of server
 # LOCATION to copy to on server and PATH_TO_IDENTITY_FILE for user auth
 
